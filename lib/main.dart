@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:ineredu/pages/home_page.dart';
 import 'package:ineredu/pages/splash_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:ineredu/widgets/navbar.dart';
+import 'package:ineredu/widgets/navbar2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,12 +43,12 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,      // Atur warna teks dan ikon di AppBar
         ),
       ),
-      home: const MyHomePage(),
+      home: const Navbar2(),
     );
   }
 }
 
-// title: 'Flutter Demo Home Page' // Isi dari const MyHomePage()
+// title: 'Flutter Demo Home Page' // Isi dari const MyHomePage() +
 
 // class MyHomePage extends StatefulWidget {
 //   const MyHomePage({super.key, required this.title});
@@ -73,7 +77,7 @@ class MyHomePage extends StatelessWidget {
       // appBar: AppBar(
       //   title: const Text('Belajar Widgetss'),
       // ),
-      body: const SplashPage(), 
+      body: const Navbar(), 
     );
   }
 }

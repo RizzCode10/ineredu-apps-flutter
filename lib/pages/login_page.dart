@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ineredu/pages/SignUp_page.dart';
 import 'package:ineredu/widgets/custom_texfield.dart';
+import 'package:ineredu/widgets/navbar.dart';
+
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 160,
             ),
+            // Logo Ineredu
             Center(
               child: Text(
                 "InerEdu",
@@ -39,6 +44,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 95,
             ),
 
+            // Input Email
             CustomTexfield(
               controller: emailController,
               textInputType: TextInputType.emailAddress,
@@ -51,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 25,
             ),
 
+            // Input Password
             CustomTexfield(
               controller: passwordController,
               textInputType: TextInputType.visiblePassword,
@@ -69,22 +76,57 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 75,
             ),
-            Container(
-              height: 56,
-              decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(16)),
-              child: const Center(
-                child: Text(
-                  "Sign In",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
+            InkWell(
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const Navbar();
+                    })),
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(16)),
+                child: const Center(
+                  child: Text(
+                    "Sign In",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
             ),
+
+            const SizedBox(height: 30,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Belum Punya Akun ?",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+
+                  ),
+                ),
+                const SizedBox(width: 5,),
+                InkWell(
+                  onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const SignupPage();
+                    })),
+                  child: Text(
+                    "Sign Up Now",
+                    style: TextStyle(
+                      color: const Color.fromARGB(255, 0, 76, 255),
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              ],
+            )
 
             // Container(
             //   height: 350,

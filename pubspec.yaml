@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   flutter_native_splash: ^2.4.1
+  curved_navigation_bar: ^1.0.6 
+  awesome_dialog: ^3.2.1
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +77,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    # - assets/images/sample-image-asset.jpg
+    - assets/images/sinichi.jpeg
+    - assets/images/blue_bel.png
+    - assets/images/analitics.png
+    - assets/images/task.png
+    - assets/images/calender.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -93,7 +99,27 @@ flutter:
     - family: Kanit
       fonts:
         - asset: assets/fonts/Kanit-bold.ttf
+
+    - family: Kanit-lite
+      fonts:
         - asset: assets/fonts/Kanit-Black.ttf
+
+    - family: PopOne
+      fonts:
+        - asset: assets/fonts/MochiyPopOne-Regular.ttf
+
+    - family: Poppins-bold
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+
+    - family: Poppins-semi-bold
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-regular.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
